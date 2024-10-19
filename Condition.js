@@ -388,14 +388,29 @@ function oddOfEven(integer){
 // console.log(output)
 
 
+//....Problem solve________________
 
+//...inch to feet_________
 
+function inchToFeet(inch){
+    const feetToInch = inch / 12
+    const feetNumber = parseInt(feetToInch)
+    const inchRemaining = inch % 12;
+    const result = feetNumber + " ft " + inchRemaining + " inch "
+    return result
+}
 
+const imamHight = inchToFeet(70)
+console.log(imamHight)
 
+//....Feet To Inch
+function feetToInch(feet){
+    const feetNumber = feet * 0.0833333
+    return feetNumber
+}
 
-
-
-
+const imamInch = feetToInch(79)
+console.log(imamInch)
 
 
 
