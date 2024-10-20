@@ -400,8 +400,8 @@ function inchToFeet(inch){
     return result
 }
 
-const imamHight = inchToFeet(70)
-console.log(imamHight)
+// const imamHight = inchToFeet(70)
+// console.log(imamHight)
 
 //....Feet To Inch
 function feetToInch(feet){
@@ -409,8 +409,127 @@ function feetToInch(feet){
     return feetNumber
 }
 
-const imamInch = feetToInch(79)
-console.log(imamInch)
+// const imamInch = feetToInch(79)
+// console.log(imamInch)
+
+function learYear(year){
+  if(year % 100 !== 0 && year % 4 === 0){
+    return true
+  }
+  else if(year % 100 === 0 && year % 400 === 0){
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+const yearLeap = learYear(2044)
+const yearLeap2 = learYear(2052)
+const yearLeap3 = learYear(2074)
+const yearLeap4 = learYear(2104)
+// console.log(yearLeap, yearLeap2, yearLeap3, yearLeap4)
+
+
+//.....Odd Number Average________
+function oddAvg(numbers){
+  let odds = []
+  for(const number of numbers){
+    if(number % 2 !== 0){
+      odds.push(number)
+    }
+  }
+  let sum = 0
+  for(const odd of odds){
+    sum = sum + odd
+  }
+  const len = odds.length
+  const results = sum / len
+  return results
+}
+
+// const oddNumber = [12, 9, 11, 82, 43, 72, 68, 89]
+// const result = oddAvg(oddNumber)
+// console.log("THis Odd Number Average: ", result)
+
+//... Even Average Number ____________
+function evenAvg(numbers){
+  const evens = []
+   for(const number of numbers){
+    if(number % 2 !== 1){
+      evens.push(number)
+    }
+   }
+   let sum = 0
+   for(const even of evens){
+    sum += even
+   }
+   const len = evens.length
+   const result = sum / len
+   return result
+}
+
+const evenNumber = [68, 81, 22, 12, 54, 34, 70, 75, 91]
+const result2 = evenAvg(evenNumber)
+// console.log("This even Average Number: ", parseInt(result2.toFixed(2)))
+
+
+//........Remove Duplicate Item From An Array________
+
+function noDuplicate(array){
+  const unique = [] 
+  for(const number of array){
+    if(unique.includes(number) === false)
+      unique.push(number)
+  }
+  return unique
+}
+const numbers = [40, 53, 23, 65, 40, 23, 54, 90, 92, 53]
+const output = noDuplicate(numbers)
+// console.log(output)
+
+function noDuplicate2(names){
+  const unique =[]
+  for(const name of names){
+    if(unique.includes(name) === false){
+      unique.push(name)
+    }
+  }
+  return unique
+}
+
+const person2 = ['Hasib', 'Mirza', 'Rajib', 'Mirza', 'Aminul', 'Hasib', 'Ali']
+const output4 = noDuplicate2(person2)
+// console.log(output4)
+
+
+let number = [9, 2, 5, 7 , 1, 3, 4, 8, 6]
+// number.sort()
+// number.reverse()
+// number.splice(2, 6)
+// number.push(12, 23)
+// number.pop()
+// console.log(number.splice(0, 4))
+// number.shift()
+// number.unshift(-1,0)
+// console.log(number.includes(11))
+// console.log(number.indexOf(5))
+console.log(number)
+
+const nam = ["Imam Hossain"]
+const y = nam.split(" ")
+console.log(y)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
