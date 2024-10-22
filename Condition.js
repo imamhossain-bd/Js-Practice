@@ -514,17 +514,99 @@ let number = [9, 2, 5, 7 , 1, 3, 4, 8, 6]
 // number.unshift(-1,0)
 // console.log(number.includes(11))
 // console.log(number.indexOf(5))
-console.log(number)
+// console.log(number.length-1)
 
-const nam = ["Imam Hossain"]
-const y = nam.split(" ")
-console.log(y)
+// const nam = ["Imam Hossain"]
+// const y = nam.split(" ")
+// console.log(y)
+
+const min = Math.min(30, 23, 12, 32, 9, 81, 308)
+// console.log(min)
+
+const max = Math.max(30, 23, 12, 32, 9, 81, 308)
+// console.log(max)
+
+// console.log(Math.abs(12-4)) //..........abs --> number gap ________
+// console.log(Math.round(48.28)) //........round --> 48.28 == 48 _____
+// console.log(Math.round(48.68)) //.........round --> 48.69 == 49_____
+// console.log(Math.floor(5.990)) //.........floor --> flout number integer --> 5.99 == 5
+// console.log(Math.ceil(5.21)) //.......ceil means --> 5.21 == 6
+// console.log(Math.random()) //.......GIve a random number _______
+// console.log(Math.random()*10)
+
+// const rand = Math.round(Math.random()*20)
+// console.log(rand)
+
+
+// const inputForm = prompt("Please Enter email")
+// function validEmail(email){
+//   if(email.includes("@") && email.includes(".")){
+//     return "Your mail is valid"
+//   }
+//   else{
+//     return "Your mail is invalid"
+//   }
+// }
+
+// const result = validEmail(inputForm)
+// document.write(result)
 
 
 
 
+const dayName = ["Friday", "Saturday", "Monday", "Wednesday", "Sunday", "Thursday", "Tuesday"]
 
 
+
+const num =  [3, 85, 1, 4, 2, 6, 8, 5, 7, 9]
+num.sort()
+// console.log(num)
+
+//.......Swap_______
+
+let a = 5;
+let b = 9;
+let c = b
+
+b = a
+a = c
+// console.log(a,b)
+
+
+let x = 4
+let y = 5
+// console.log(x, y);
+// [x, y] = [y, x];
+// console.log(x, y);
+
+//..........Task 1 ____________
+function celsiusToFarenheit(far){
+  const result = (far * 9/5) + 32 ;
+  return result
+}
+
+const output5 = celsiusToFarenheit(3)
+// console.log(output5)
+
+//......Task 2____________
+
+function findNumber(find, numbers){
+  const maps = {}
+  for(let i = 0; i < numbers; i++){
+    if(maps[find[i]]){
+      maps[find[i]] +=1
+    }
+    else{
+      maps[find[i]] =1
+    }
+  }
+  return maps
+}
+
+const sub = [5,6,11,12,98,98, 5]
+const len = sub.length
+const result = findNumber(sub, len)
+console.log(result)
 
 
 
