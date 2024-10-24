@@ -240,9 +240,9 @@ function doubleOrTriple(number, doDouble) {
   }
 }
 
-// const result = doubleOrTriple(40, true);
-// const result1 = doubleOrTriple(40, false);
-// console.log(result, result1)
+// const result4 = doubleOrTriple(40, true);
+// const result5 = doubleOrTriple(40, false);
+// console.log(result4, result5)
 
 function array(number) {
   const len = number.length;
@@ -267,7 +267,7 @@ const person = getAge({
 function sumOfNumber(numbers) {
     let sum = 0
   for (number of numbers) {
-    console.log(number)
+    
     sum = number + sum
   }
   return sum
@@ -365,11 +365,11 @@ function countZero(binary){
             countOfOne++
         }
     }
-    return countOfOne
+    return countOfZero
 }
 // const numbs = "011011";
-// const output = countZero(numbs)
-// console.log(output)
+// const output1 = countZero(numbs)
+// console.log(output1)
 
 
 //.....Task 5__________
@@ -603,16 +603,231 @@ function findNumber(find, numbers){
   return maps
 }
 
-const sub = [5,6,11,12,98,98, 5]
-const len = sub.length
-const result = findNumber(sub, len)
-console.log(result)
+// const sub = [5,6,11,12,98,98, 5]
+// const len = sub.length
+// const result = findNumber(sub, len)
+// console.log(result)
+
+function numberFind(numbers, find){
+  let finds = 0
+  for(const number of numbers){
+    if(number === find){
+      finds++
+    }
+  }
+  return finds;
+}
+
+let subNumber = [5,22,64,5,87,43,22,64,60,5]
+let target = 64
+const result = numberFind(subNumber, target)
+// console.log(result)
+
+//........Task 3________
+const randomNumber = Math.floor(Math.random()* (20 - 10)) + 10;
+// console.log(randomNumber)
+
+//.........Task 4___________
+function findVowels(vowel){
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  let count = 0
+  for(const letter of vowel){
+    if(vowels.includes(letter)){
+      count++
+    }
+  }
+  return count
+}
+
+const sent = "Hello World"
+const findResult = findVowels(sent)
+// console.log(findResult)
+
+//.........Task 5_________
+
+function longWord(str){
+ let string = str.split(' ')
+ let longest = 0
+ let word = null
+ for(let i = 0; i <= string.length -1; i++){
+  if(longest < string[i].length){
+    longest = string[i].length
+    word = string[i]
+  }
+ }
+ return word;
+}
+
+// console.log(longWord('I am learning Programming to become a programmer'))
 
 
 
 
+// let grade = prompt('Enter Your Mark')
+// let fullMark = 100
+// grade = (grade / fullMark) * 100
+
+// if(grade >= 80 && grade <=100){
+//   document.write('Apner Grade A+')
+// }
+// else if(grade >= 70 && grade <= 79){
+//   document.write('Apner Grade A')
+// }
+// else if(grade >= 60 && grade <= 69){
+//   document.write('Apner Grade A-')
+// }
+// else{
+//   document.write('Apni fail krcen')
+// }
 
 
+//.........Get Max Number___________
+let height = [65, 20, 90, 21, 38, 50, 44, 38, 97]
+function getMin(numbers){
+  let gate = numbers[0]
+  for(const number of numbers){
+    if(number < gate){
+      gate = number
+    }
+  }
+  return gate
+}
+
+const minNumber = getMin(height)
+// console.log(minNumber)
+
+
+//.........Get Max Number________________
+let height1 = [65, 20, 90, 21, 38, 50, 44, 38, 97]
+function getMax(numbers){
+  let gate = numbers[0]
+  for(const number of numbers){
+    if(number > gate){
+      gate = number
+    }
+  }
+  return gate
+}
+
+const maxNumber1 = getMax(height1)
+// console.log(maxNumber1)
+
+
+//......Total cloth Price ___________
+function clothsPrice(shirt, pent, shose){
+  const perShirt = 500;
+  const perPent = 600;
+  const perShos = 900;
+
+  const shirtTotalPrice = perShirt * shirt;
+  const pentTotalPrice = perPent * pent;
+  const shoseTotalPrice = perShos * shose;
+
+  const totalClothPrice = shirtTotalPrice + pentTotalPrice + shoseTotalPrice;
+
+  return totalClothPrice
+}
+
+const Cloths = clothsPrice(4, 2, 2)
+// console.log(Cloths)
+
+
+//...........Get Min Mobile Price _____________
+const phones = [
+  {name : 'Samsung', price : 56000, camera: '12mp', color : 'Black'},
+  {name : 'Iphone', price : 156000, camera: '12mp', color : 'Black'},
+  {name : 'Oppo', price : 18000, camera: '12mp', color : 'Black'},
+  {name : 'Walton', price : 56000, camera: '12mp', color : 'Black'},
+  {name : 'Nokia', price : 14000, camera: '12mp', color : 'Black'},
+  {name : 'Xiaomi', price : 26000, camera: '12mp', color : 'Black'}
+]
+
+function minMobilePrice(mobiles){
+  let minPrice = mobiles[0]
+  for(const mobile of mobiles){
+    if(mobile.price < minPrice.price){
+      minPrice = mobile
+    }
+  }
+  return minPrice
+}
+
+const mobilePrices = minMobilePrice(phones)
+// console.log(mobilePrices)
+
+
+//.........per Product Price________
+const product =[
+  {name : 'Shampoo', price : 40, quantity : 10},
+  {name : 'Chiruni', price : 30, quantity : 2},
+  {name : 'Shirt', price : 500, quantity : 3},
+  {name : 'Pant', price : 700, quantity : 2},
+  {name : 'Phone Cover', price : 200, quantity : 5}
+]
+
+function getProductPrice (products){
+  let price = 0
+  for(const product of products){
+    const total = product.price * product.quantity
+    price = price + total
+  }
+  return  price
+}
+
+const priceProduct = getProductPrice(product)
+// console.log(priceProduct)
+
+
+//..........Ticket Discount Price ____________
+
+function ticketDiscount (ticketPrice){
+  if(ticketPrice < 100){
+    const totalPrice = ticketPrice * 100;
+    return totalPrice
+  }
+  else if(ticketPrice <= 200){
+    const totalPrice = ticketPrice * 80
+    return totalPrice
+  }
+  else{
+    const totalPrice = ticketPrice * 60
+    return totalPrice
+  }
+}
+const ticket = ticketDiscount(203)
+// console.log(ticket)
+
+
+function ticketQuantity(ticketPrice){
+  const firstDiscountPrice = 100
+  const secondDiscountPrice = 80
+  const thirdDiscountPrice = 60
+
+  if(ticketPrice <= 100){
+    const firstTicket = ticketPrice * firstDiscountPrice
+    return firstTicket
+  }
+  else if(ticketPrice <= 200){
+    const firstTicket = 100 * firstDiscountPrice;
+    const remainingQuantity = ticketPrice - 100;
+    const remainingTotal = firstTicket * secondDiscountPrice
+    const total =remainingQuantity + remainingTotal
+    return total;
+  }
+  else{
+    const firstTicket = 100 * firstDiscountPrice
+    const secondTicket = 100 * secondDiscountPrice;
+    const remainingQuantity = ticketPrice - 200;
+    const remainigTotal = remainingQuantity * thirdDiscountPrice
+    const total = firstTicket + secondTicket + remainigTotal
+    return total
+  }
+
+}
+
+const ticket2 = ticketQuantity(205)
+
+console.log(ticket2)
 
 
 
